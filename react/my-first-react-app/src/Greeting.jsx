@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Greeting() {
     return <h2>My first React component (Not really though)</h2>
@@ -14,9 +14,29 @@ function Intro() {
             <form>
                 <input type="text" />
             </form>
+
         </>
     );
 }
+
+function Clock() {
+    const [counter, setCounter] = useState(0);
+  
+    useEffect(() => {
+        const key = setInterval(() => {
+          setCounter(count => count + 1)
+        }, 1000);
+
+        return () => {
+            clearInterval(key);
+        };
+      }, [])
+  
+    return (
+      <p>{counter} seconds have passed.</p>
+    );
+  }
+  
 
 const today = new Date();
 
@@ -30,4 +50,4 @@ function FavouriteFood() {
     );
 }
 
-export { Greeting, Intro, FavouriteFood };
+export { Greeting, Intro, FavouriteFood, Clock };
