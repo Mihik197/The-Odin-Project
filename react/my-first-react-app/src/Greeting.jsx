@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function Greeting() {
     return <h2>My first React component (Not really though)</h2>
 }
