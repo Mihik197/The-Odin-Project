@@ -38,6 +38,7 @@ function FormSection({ sectionTitle, fields }) {
                 ))}
                 <button type="submit">{submitted? "Edit" : "Submit"}</button>
             </form>
+            <br /><br />
         </section>
     );
 }

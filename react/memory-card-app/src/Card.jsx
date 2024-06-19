@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function Card ({ pokemon, onClick }) {
     return (
         <div className="Card" onClick={() => onClick(pokemon.id)} style={style.card}>
@@ -5,7 +7,15 @@ function Card ({ pokemon, onClick }) {
             <p>{pokemon.name}</p>
         </div>
     );
-}   
+}
+
+Card.proptypes = {
+    name: PropTypes.string.isRequired, 
+}
+
+Card.defaultProps = {
+    name: 'pikachu',
+}
 
 export default Card;
 
