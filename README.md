@@ -1,3 +1,3 @@
 # The-Odin-Project
 
-Mini projects from the The Odin Projects. Still under work
+Mini projects from the The Odin Project. Still under work
